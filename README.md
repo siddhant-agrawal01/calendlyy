@@ -24,7 +24,8 @@ A modern scheduling application built with Next.js 14, Prisma, and Clerk Authent
 ## 📋 Prerequisites
 
 - Node.js 18+ 
-- PostgreSQL
+- PostgreSQL[Screencast from 2025-01-31 23-06-40.webm](https://github.com/user-attachments/assets/5dff6f85-79ac-48d6-a1a2-a962e689a65a)
+
 - npm or yarn
 - Clerk account
 
