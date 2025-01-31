@@ -1,4 +1,5 @@
 # Calendly
+https://github.com/user-attachments/assets/8ef90171-5ba1-4e17-97ce-9ad2975d2a11
 
 A modern scheduling application built with Next.js 14, Prisma, and Clerk Authentication.
 
@@ -29,7 +30,8 @@ A modern scheduling application built with Next.js 14, Prisma, and Clerk Authent
 - npm or yarn
 - Clerk account
 
-## 🛠️ Installation
+## 🛠️ Installation[Screencast from 2025-01-31 23-06-40.webm](https://github.com/user-attachments/assets/51e21a63-57f4-40f7-931c-89cdb8bec868)
+
 
 1. **Clone the repository**
    ```bash
