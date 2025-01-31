@@ -50,8 +50,7 @@ export default async function UserProfilePage({ params }) {
               key={event.id}
               event={event}
               username={params.username}
-              // isPublic
-              // isPrivate
+             
             />
           ))}
         </div>
