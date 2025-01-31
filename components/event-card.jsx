@@ -58,7 +58,9 @@ export default function EventCard({ event, username, isPublic = false }) {
         <CardTitle className="text-2xl">{event.title}</CardTitle>
         <CardDescription className="flex justify-between">
           <span>
-            {event.duration} mins | {event.isPrivate ? "Private" : "Public"}
+            {event.duration} mins 
+            {/* {event.duration} mins | {event.isPrivate ? "Private" : "Public"} */}
+
           </span>
           <span>{event._count.bookings} Bookings</span>
         </CardDescription>
@@ -66,7 +68,7 @@ export default function EventCard({ event, username, isPublic = false }) {
       <CardContent>
         <p>{event.description.substring(0, event.description.indexOf("."))}.</p>
       </CardContent>
-      {!isPublic && (
+      { (
         <CardFooter className="flex gap-2">
           <Button
             variant="outline"

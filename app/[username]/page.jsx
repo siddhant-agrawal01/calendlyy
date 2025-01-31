@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${user.name}'s Profile | Your App Name`,
-    description: `Book an event with ${user.name}. View available public events and schedules.`,
+    description: `Book an event with ${user.name}. View available events and schedules.`,
   };
 }
 
@@ -40,7 +40,9 @@ export default async function UserProfilePage({ params }) {
       </div>
 
       {user.events.length === 0 ? (
-        <p className="text-center text-gray-600 dark:text-gray-300">No public events available.</p>
+        <p className="text-center text-gray-600 dark:text-gray-300">
+          No events available.
+        </p>
       ) : (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {user.events.map((event) => (
@@ -48,7 +50,8 @@ export default async function UserProfilePage({ params }) {
               key={event.id}
               event={event}
               username={params.username}
-              isPublic
+              // isPublic
+              // isPrivate
             />
           ))}
         </div>

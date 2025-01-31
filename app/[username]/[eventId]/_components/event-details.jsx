@@ -1,5 +1,7 @@
 import { Calendar, Clock } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function EventDetails({ event }) {
   const { user } = event;
@@ -25,6 +27,12 @@ export default function EventDetails({ event }) {
         <span>Google Meet</span>
       </div>
       <p className="text-gray-700 dark:text-gray-300">{event.description}</p>
+
+    <div>
+     <Link href = '/dashboard'> <Button className="mt-4" variant="outline">
+        Back to Dashboard
+      </Button></Link>
+    </div>
     </div>
   );
 }

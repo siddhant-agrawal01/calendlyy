@@ -29,7 +29,7 @@ const EventForm = ({ onSubmitForm, initialData = {} }) => {
       title: initialData.title || "",
       description: initialData.description || "",
       duration: initialData.duration || 30,
-      isPrivate: initialData.isPrivate ?? true,
+      // isPrivate: initialData.isPrivate ?? true,
     },
   });
 
@@ -103,7 +103,7 @@ const EventForm = ({ onSubmitForm, initialData = {} }) => {
         )}
       </div>
 
-      <div>
+      {/* <div>
         <label
           htmlFor="isPrivate"
           className="block text-sm font-medium text-gray-700"
@@ -128,7 +128,7 @@ const EventForm = ({ onSubmitForm, initialData = {} }) => {
             </Select>
           )}
         />
-      </div>
+      </div> */}
 
       {error && <p className="text-red-500 text-xs mt-1">{error.message}</p>}
 

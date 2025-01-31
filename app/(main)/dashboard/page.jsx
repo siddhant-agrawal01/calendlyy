@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { updateUsername } from "@/actions/users";
+// import { updateUsername } from "@/actions/users";
 import { BarLoader } from "react-spinners";
 import useFetch from "@/hooks/use-fetch";
 import { usernameSchema } from "@/app/lib/validators";
@@ -41,26 +41,29 @@ export default function DashboardPage() {
     (async () => await fnUpdates())();
   }, []);
 
-  const { loading, error, fn: fnUpdateUsername } = useFetch(updateUsername);
+  // const { loading, error, fn: fnUpdateUsername } = useFetch(updateUsername);
 
-  const onSubmit = async (data) => {
-    await fnUpdateUsername(data.username);
-  };
+  // const onSubmit = async (data) => {
+  //   await fnUpdateUsername(data.username);
+  // };
 
   return (
     <div className="space-y-8">
       <Card>
         <CardHeader>
-          <CardTitle>Welcome, {user?.firstName}!</CardTitle>
+          <CardTitle className= 'text-2xl' >Welcome, {user?.firstName}!</CardTitle>
         </CardHeader>
         <CardContent>
           {!loadingUpdates ? (
-            <div className="space-y-6 font-light">
+            <div className="space-y-6 font-bold font-xl">
               <div>
                 {upcomingMeetings && upcomingMeetings?.length > 0 ? (
-                  <ul className="list-disc pl-5">
+                  <ul className="space-y-3 list-none">
                     {upcomingMeetings?.map((meeting) => (
-                      <li key={meeting.id}>
+                      <li
+                        key={meeting.id}
+                        className="p-3 bg-white dark:bg-gray-700 rounded shadow-sm border-l-4 border-blue-500"
+                      >
                         {meeting.event.title} on{" "}
                         {format(
                           new Date(meeting.startTime),
@@ -76,12 +79,18 @@ export default function DashboardPage() {
               </div>
             </div>
           ) : (
-            <p>Loading updates...</p>
+            <div className="flex justify-center py-4">
+              <div
+                className="w-8 h-8 border-4 border-gray-300 dark:border-gray-600 border-t-4 border-t-blue-500
+                rounded-full animate-spin"
+                style={{ animation: "spin 1s linear infinite" }}
+              />
+            </div>
           )}
         </CardContent>
       </Card>
 
-      <Card>
+      {/* <Card>
         <CardHeader>
           <CardTitle>Your Unique Link</CardTitle>
         </CardHeader>
@@ -109,7 +118,7 @@ export default function DashboardPage() {
             </Button>
           </form>
         </CardContent>
-      </Card>
+      </Card> */}
     </div>
   );
 }

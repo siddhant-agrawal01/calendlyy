@@ -75,7 +75,7 @@ export default function BookingForm({ event, availability }) {
 
   if (data) {
     return (
-      <div className="text-center p-10 border bg-white dark:bg-gray-800 dark:text-white rounded-lg">
+      <div className="text-center p-10 border mx-5  bg-white dark:bg-gray-800 dark:text-white rounded-lg">
         <h2 className="text-2xl font-bold mb-4 dark:text-white">Booking successful!</h2>
         {data.meetLink && (
           <p className="dark:text-gray-300">
@@ -95,7 +95,7 @@ export default function BookingForm({ event, availability }) {
   }
 
   return (
-    <div className="flex flex-col gap-8 p-10 border bg-white dark:bg-gray-800 dark:text-white rounded-lg">
+    <div className="flex flex-col gap-8 p-10 border mx-5 bg-white dark:bg-gray-800 dark:text-white rounded-lg">
       <div className="md:h-96 flex flex-col md:flex-row gap-5">
         <div className="w-full dark:text-gray-200">
           <DayPicker

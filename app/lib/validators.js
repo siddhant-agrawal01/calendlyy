@@ -52,7 +52,7 @@ export const eventSchema = z.object({
     .max(500, "Description must be 500 characters or less"),
   duration: z.number().int().positive("Duration must be a positive number"),
 
-  isPrivate: z.boolean(),
+  // isPrivate: z.boolean(),
 });
 
 export const bookingSchema = z.object({
